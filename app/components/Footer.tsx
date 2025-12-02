@@ -19,9 +19,9 @@ const footerLinks = {
     { name: "Terms of Service", href: "/terms" },
   ],
   Social: [
-    { name: "Instagram", href: "https://instagram.com/shopscope" },
-    { name: "Twitter", href: "https://twitter.com/shopscope" },
-    { name: "TikTok", href: "https://tiktok.com/@shopscope" },
+    { name: "Instagram", href: "https://instagram.com/shopscope_" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/shopscope/" },
+    { name: "TikTok", href: "https://tiktok.com/@shopscope_" },
   ],
 };
 
@@ -52,40 +52,44 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-4">
               <motion.a
-                href="https://instagram.com/shopscope"
+                href="https://instagram.com/shopscope_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
                 whileHover={{ scale: 1.1, rotate: 360 }}
                 transition={{ duration: 0.3 }}
+                aria-label="Instagram"
               >
                 <Instagram size={18} />
               </motion.a>
               <motion.a
-                href="https://twitter.com/shopscope"
+                href="https://www.linkedin.com/company/shopscope/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
                 whileHover={{ scale: 1.1, rotate: 360 }}
                 transition={{ duration: 0.3 }}
-              >
-                <Twitter size={18} />
-              </motion.a>
-              <motion.a
-                href="https://linkedin.com/company/shopscope"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
-                whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ duration: 0.3 }}
+                aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
+              </motion.a>
+              <motion.a
+                href="https://tiktok.com/@shopscope_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.3 }}
+                aria-label="TikTok"
+              >
+                <Twitter size={18} />
               </motion.a>
               <motion.a
                 href="mailto:hello@shopscope.app"
                 className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
                 whileHover={{ scale: 1.1, rotate: 360 }}
                 transition={{ duration: 0.3 }}
+                aria-label="Email"
               >
                 <Mail size={18} />
               </motion.a>

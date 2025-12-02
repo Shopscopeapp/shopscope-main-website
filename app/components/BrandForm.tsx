@@ -50,15 +50,25 @@ export default function BrandForm() {
     setIsLoading(true);
     
     try {
-      const response = await fetch('/api/brand-signup', {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/xblnykoj', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          brandName: formData.brandName,
+          phoneNumber: formData.phoneNumber,
+          onShopify: formData.onShopify,
+          numberOfProducts: formData.numberOfProducts,
+          styleOfClothing: formData.styleOfClothing,
+          message: formData.message,
+          _subject: `New Brand Application: ${formData.brandName}`,
+        }),
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         setIsSubmitted(true);
@@ -76,7 +86,7 @@ export default function BrandForm() {
           agreeToPolicy: false,
         });
       } else {
-        alert(data.error || 'Something went wrong. Please try again.');
+        alert('Something went wrong. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
