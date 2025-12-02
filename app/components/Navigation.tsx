@@ -32,7 +32,7 @@ export default function Navigation() {
     <>
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "py-4 backdrop-blur-xl" : "py-6"
+          isScrolled ? "py-4 bg-white/95" : "py-6"
         }`}
         style={{ opacity }}
         initial={{ y: -100 }}
