@@ -79,19 +79,10 @@ export default function AppShowcase() {
   };
 
   return (
-    <section ref={ref} className="relative py-32 px-6 overflow-hidden">
-      {/* Animated gradient background */}
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        animate={{
-          background: [
-            "radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 50%)",
-            "radial-gradient(circle at 80% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 50%)",
-            "radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 50%)",
-          ],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      />
+    <section ref={ref} className="relative py-20 md:py-32 px-6 overflow-hidden bg-gradient-to-b from-white via-black/[0.02] to-white">
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-black/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-black/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -99,51 +90,40 @@ export default function AppShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16 md:mb-20"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={isInView ? { scale: 1 } : {}}
-            transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-6 glass rounded-full text-sm border border-black/10"
-          >
-            <Smartphone size={16} className="text-black" />
-            <span className="font-medium">Experience the App</span>
-          </motion.div>
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
-            Your New Favorite Way
-            <br />
-            to <span className="text-gradient">Shop Fashion</span>
+          <h2 className="text-4xl md:text-6xl font-black mb-4 md:mb-6">
+            See It In <span className="text-gradient">Action</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Swipe, discover, and shop from multiple brands in one seamless experience
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            Experience the future of fashion shopping
           </p>
         </motion.div>
 
         {/* Main Showcase */}
         <div className="relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Phone Mockup with Screens */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Screen Showcase */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative lg:order-2"
             >
-              {/* Floating screen mockup */}
+              {/* Screen mockup */}
               <motion.div
                 animate={{
-                  y: [0, -20, 0],
+                  y: [0, -15, 0],
                 }}
                 transition={{
-                  duration: 4,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative mx-auto max-w-[300px] md:max-w-[350px]"
+                className="relative mx-auto max-w-[280px] md:max-w-[320px]"
               >
-                {/* Screen container - no phone frame */}
-                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[9/19.5]">
+                {/* Screen container */}
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[9/19.5] border-4 border-black">
                   <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.div
                       key={currentIndex}
@@ -153,13 +133,11 @@ export default function AppShowcase() {
                       animate="center"
                       exit="exit"
                       transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 },
-                        scale: { duration: 0.3 },
-                        rotateY: { duration: 0.3 },
+                        x: { type: "spring", stiffness: 250, damping: 25 },
+                        opacity: { duration: 0.3 },
+                        scale: { duration: 0.4 },
                       }}
                       className="absolute inset-0"
-                      style={{ perspective: 1000 }}
                     >
                       <img
                         src={appScreens[currentIndex].image}
@@ -170,61 +148,20 @@ export default function AppShowcase() {
                   </AnimatePresence>
                 </div>
 
-                {/* Enhanced glow effect */}
+                {/* Glow effect */}
                 <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${appScreens[currentIndex].color} rounded-[3rem] blur-3xl -z-10`}
+                  className={`absolute inset-0 bg-gradient-to-br ${appScreens[currentIndex].color} rounded-3xl blur-3xl opacity-40 -z-10`}
                   animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0.8, 0.5],
-                    rotate: [0, 5, 0],
+                    scale: [1, 1.15, 1],
                   }}
                   transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-                {/* Secondary glow */}
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-tl ${appScreens[currentIndex].color} rounded-[3rem] blur-2xl -z-10`}
-                  animate={{
-                    scale: [1.2, 1, 1.2],
-                    opacity: [0.3, 0.5, 0.3],
-                    rotate: [0, -5, 0],
-                  }}
-                  transition={{
-                    duration: 5,
+                    duration: 3,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
                 />
               </motion.div>
 
-              {/* Floating decorative elements */}
-              <motion.div
-                animate={{
-                  y: [0, -30, 0],
-                  rotate: [0, 10, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute -top-10 -right-10 w-20 h-20 bg-black/5 rounded-full blur-xl"
-              />
-              <motion.div
-                animate={{
-                  y: [0, 30, 0],
-                  rotate: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute -bottom-10 -left-10 w-32 h-32 bg-black/5 rounded-full blur-xl"
-              />
             </motion.div>
 
             {/* Content */}
@@ -232,7 +169,7 @@ export default function AppShowcase() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="lg:order-1 space-y-8"
+              className="lg:order-1 space-y-6 text-center lg:text-left"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -240,31 +177,27 @@ export default function AppShowcase() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4 }}
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black rounded-2xl mb-6">
-                    <span className="text-white text-xl font-black">
-                      {currentIndex + 1}
-                    </span>
-                  </div>
-                  <h3 className="text-4xl md:text-5xl font-black mb-4">
+                  <h3 className="text-3xl md:text-4xl font-black mb-3">
                     {appScreens[currentIndex].title}
                   </h3>
-                  <p className="text-xl text-gray-600 leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                     {appScreens[currentIndex].description}
                   </p>
                 </motion.div>
               </AnimatePresence>
 
               {/* Navigation */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center lg:justify-start gap-4">
                 <motion.button
                   onClick={prevSlide}
-                  className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center magnetic-button"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Previous screen"
                 >
-                  <ChevronLeft size={24} />
+                  <ChevronLeft size={28} />
                 </motion.button>
 
                 <div className="flex gap-2">
@@ -275,23 +208,25 @@ export default function AppShowcase() {
                         setDirection(index > currentIndex ? 1 : -1);
                         setCurrentIndex(index);
                       }}
-                      className={`h-2 rounded-full transition-all ${
+                      className={`h-3 rounded-full transition-all ${
                         index === currentIndex
-                          ? "w-8 bg-black"
-                          : "w-2 bg-black/20 hover:bg-black/40"
+                          ? "w-10 bg-black"
+                          : "w-3 bg-black/20 hover:bg-black/40"
                       }`}
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.1 }}
+                      aria-label={`Go to screen ${index + 1}`}
                     />
                   ))}
                 </div>
 
                 <motion.button
                   onClick={nextSlide}
-                  className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center magnetic-button"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Next screen"
                 >
-                  <ChevronRight size={24} />
+                  <ChevronRight size={28} />
                 </motion.button>
               </div>
             </motion.div>
@@ -303,7 +238,7 @@ export default function AppShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-20 flex flex-wrap justify-center gap-4"
+          className="mt-16 md:mt-20 flex flex-wrap justify-center gap-3 md:gap-4"
         >
           {[
             "Swipe Interface",
@@ -317,7 +252,7 @@ export default function AppShowcase() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-              className="glass px-6 py-3 rounded-full border border-black/10 hover:border-black/30 transition-all"
+              className="glass px-5 md:px-6 py-2 md:py-3 rounded-full border border-black/10 hover:border-black/30 transition-all text-sm md:text-base"
               whileHover={{ scale: 1.05 }}
             >
               <span className="font-semibold">{feature}</span>

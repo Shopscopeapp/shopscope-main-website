@@ -97,34 +97,55 @@ export default function Navigation() {
         </motion.div>
       </motion.nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Improved */}
       <motion.div
-        initial={{ opacity: 0, x: "100%" }}
-        animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : "100%" }}
-        transition={{ duration: 0.3 }}
+        initial={{ opacity: 0, y: "-100%" }}
+        animate={{ 
+          opacity: isOpen ? 1 : 0, 
+          y: isOpen ? 0 : "-100%"
+        }}
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
         className="fixed inset-0 z-40 bg-white md:hidden"
-        style={{ display: isOpen ? "flex" : "none" }}
+        style={{ display: isOpen ? "block" : "none" }}
       >
-        <div className="flex flex-col items-center justify-center gap-8 w-full">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-2xl font-medium hover:text-gray-700 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </a>
-          ))}
-          <button
+        <div className="flex flex-col h-full pt-24 pb-12 px-6">
+          {/* Navigation Items */}
+          <nav className="flex-1 flex flex-col justify-center gap-6">
+            {navItems.map((item, index) => (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
+                transition={{ delay: index * 0.1 }}
+                className="text-3xl font-black hover:text-gray-600 transition-colors border-b border-black/5 pb-4"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </motion.a>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 20 }}
+            transition={{ delay: 0.3 }}
             onClick={() => {
               setIsOpen(false);
               scrollToTop();
             }}
-            className="px-8 py-3 bg-black text-white rounded-full font-medium text-xl hover:bg-gray-800 transition-all"
+            className="w-full px-8 py-4 bg-black text-white rounded-2xl font-bold text-lg hover:bg-gray-800 transition-all"
           >
             Join Waitlist
-          </button>
+          </motion.button>
+
+          {/* Decorative Element */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isOpen ? 1 : 0 }}
+            className="absolute top-24 right-6 w-32 h-32 bg-black/5 rounded-full blur-3xl -z-10"
+          />
         </div>
       </motion.div>
     </>
