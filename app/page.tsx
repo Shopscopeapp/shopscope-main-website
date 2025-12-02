@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
-import AppShowcase from "./components/AppShowcase";
+import AppShowcase from "./components/AppShowcaseOption2";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import ForBrands from "./components/ForBrands";
