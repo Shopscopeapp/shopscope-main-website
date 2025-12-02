@@ -1,15 +1,11 @@
-import { Metadata } from "next";
-import PrivacyContent from "./PrivacyContent";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | ShopScope",
-  description: "Learn how ShopScope collects, uses, and protects your personal information. Our commitment to your privacy and data security.",
-  robots: "index, follow",
-};
+import { motion } from "framer-motion";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import { Shield } from "lucide-react";
 
-export default function PrivacyPolicy() {
-  return <PrivacyContent />;
-}
+export default function PrivacyContent() {
   return (
     <main className="relative min-h-screen bg-white text-black">
       <Navigation />
