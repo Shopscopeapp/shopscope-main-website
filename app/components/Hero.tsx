@@ -103,7 +103,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-6xl md:text-8xl font-black mb-6 leading-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
         >
           <motion.span
             initial={{ opacity: 0, x: -50 }}
@@ -111,29 +111,29 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="inline-block"
           >
-            Connect Style
-          </motion.span>
-          <br />
-          <motion.span
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="inline-block"
-          >
-            With{" "}
+            The{" "}
           </motion.span>
           <motion.span
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ 
               duration: 0.8, 
-              delay: 0.9,
+              delay: 0.7,
               type: "spring",
               stiffness: 200
             }}
             className="text-gradient inline-block glow-text"
           >
-            Discovery
+            Swipe-Right
+          </motion.span>
+          <br />
+          <motion.span
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="inline-block"
+          >
+            Fashion Discovery App
           </motion.span>
         </motion.h1>
 
