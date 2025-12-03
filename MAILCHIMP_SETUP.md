@@ -166,7 +166,7 @@ For Mailchimp-specific issues:
 - [API Error Codes](https://mailchimp.com/developer/marketing/docs/errors/)
 
 For ShopScope issues:
-- Email: hello@shopscope.app
+- Email: info@shopscope.app
 
 ---
 

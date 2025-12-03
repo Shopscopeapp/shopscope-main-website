@@ -11,7 +11,7 @@
 ### 2. Content Review
 - [x] All navigation links work correctly
 - [x] Footer links point to proper destinations
-- [x] Email links are functional (hello@shopscope.app)
+- [x] Email links are functional (info@shopscope.app)
 - [x] Social media links open in new tabs
 - [x] No dead links or 404 pages
 - [x] Logo and favicon properly displayed
@@ -153,7 +153,7 @@ Add to `app/layout.tsx`:
 ```
 
 ## Contact Information
-- **Email**: hello@shopscope.app
+- **Email**: info@shopscope.app
 - **Instagram**: @shopscope
 - **Twitter**: @shopscope
 - **TikTok**: @shopscope

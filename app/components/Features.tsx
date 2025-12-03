@@ -7,7 +7,7 @@ import { useRef } from "react";
 const features = [
   {
     icon: Heart,
-    title: "Personalized Discovery",
+    title: "Personalised Discovery",
     description: "Swipe through curated pieces that match your unique style. Our AI learns what you love.",
   },
   {
@@ -17,13 +17,13 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Instant Discounts",
-    description: "Automatic discounts applied at checkout. Save money without hunting for codes.",
+    title: "Automatic Discounts",
+    description: "Automatic discounts applied at checkout when available. Save money without hunting for codes.",
   },
   {
     icon: Sparkles,
     title: "Style Collections",
-    description: "Create and organize custom collections. Build your perfect wardrobe vision board.",
+    description: "Create and organise custom collections. Build your perfect wardrobe vision board.",
   },
   {
     icon: Lock,
@@ -33,7 +33,7 @@ const features = [
   {
     icon: TrendingUp,
     title: "Trend Intelligence",
-    description: "Stay ahead with AI-powered trend analysis and personalized style recommendations.",
+    description: "Stay ahead with AI-powered trend analysis and personalised style recommendations.",
   },
 ];
 

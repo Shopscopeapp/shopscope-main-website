@@ -112,8 +112,8 @@ export default function CTA() {
             >
               <p className="text-gray-600 text-sm mb-4">
                 Questions? Email us at{" "}
-                <a href="mailto:hello@shopscope.app" className="text-black font-semibold underline">
-                  hello@shopscope.app
+                <a href="mailto:info@shopscope.app" className="text-black font-semibold underline">
+                  info@shopscope.app
                 </a>
               </p>
               <button

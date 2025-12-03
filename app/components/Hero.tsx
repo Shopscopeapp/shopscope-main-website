@@ -92,10 +92,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass rounded-full text-sm border-pulse"
+          className="inline-flex items-center gap-2 px-4 py-2 mt-16 md:mt-0 mb-8 glass rounded-full text-sm border-pulse"
         >
           <Sparkles size={16} className="text-black" />
-          <span className="font-medium">Coming Soon - Join the Waitlist</span>
+          <span className="font-medium">Launching Q1 2026 - Join The Waitlist</span>
         </motion.div>
 
         {/* Main Heading */}
@@ -158,22 +158,22 @@ export default function Hero() {
         >
           {!isSubmitted ? (
             <form onSubmit={handleSubmit} className="relative">
-              <div className="glass rounded-3xl p-3 border border-black/20 flex flex-col sm:flex-row gap-3 items-center">
+              <div className="bg-white rounded-3xl p-4 border-2 border-black/20 shadow-lg flex flex-col sm:flex-row gap-3 items-center">
                 <div className="relative flex-1 w-full">
-                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email to join the waitlist"
+                    placeholder="Enter your email"
                     required
-                    className="w-full px-12 py-4 bg-white rounded-2xl border border-black/10 focus:border-black/30 outline-none transition-all text-lg"
+                    className="w-full px-12 py-4 bg-gray-50 rounded-2xl border border-black/10 focus:border-black/30 outline-none transition-all text-lg"
                   />
                 </div>
                 <motion.button
                   type="submit"
                   disabled={isLoading}
-                  className="px-8 py-4 bg-black text-white rounded-2xl font-bold text-lg magnetic-button whitespace-nowrap flex items-center gap-2 disabled:opacity-50"
+                  className="w-full sm:w-auto px-8 py-4 bg-black text-white rounded-2xl font-bold text-lg magnetic-button whitespace-nowrap flex items-center justify-center gap-2 disabled:opacity-50"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -200,22 +200,22 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
-                className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-600"
+                className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-base sm:text-sm text-black"
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3 bg-white/80 px-4 py-2 rounded-full border border-black/10">
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4].map((i) => (
                       <div
                         key={i}
-                        className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-200 to-gray-400 border-2 border-white"
+                        className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 border-2 border-white"
                       />
                     ))}
                   </div>
-                  <span className="font-medium">2,847 people waiting</span>
+                  <span className="font-semibold">2,847 people waiting</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-black" />
-                  <span>Early access & exclusive perks</span>
+                <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-black/10">
+                  <CheckCircle2 size={18} className="text-black" />
+                  <span className="font-medium">Early access & exclusive perks</span>
                 </div>
               </motion.div>
             </form>

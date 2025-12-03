@@ -9,13 +9,13 @@ const steps = [
     number: "01",
     icon: Smartphone,
     title: "Swipe & Discover",
-    description: "Browse through personalized fashion pieces curated just for your style. Like what you see? Swipe right.",
+    description: "Browse through personalised fashion pieces curated just for your style. Like what you see? Swipe right.",
   },
   {
     number: "02",
     icon: Heart,
     title: "Save Collections",
-    description: "Create custom collections of your favorite finds. Build your dream wardrobe and organize by occasion, season, or vibe.",
+    description: "Create custom collections of your favourite finds. Build your dream wardrobe and organise by occasion, season, or vibe.",
   },
   {
     number: "03",
@@ -27,7 +27,7 @@ const steps = [
     number: "04",
     icon: Sparkles,
     title: "Enjoy & Share",
-    description: "Receive your curated pieces and share your style collections with friends. Keep discovering more.",
+    description: "Shop products your friends are wearing, create posts, tag products and get paid when your followers checkout.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function HowItWorks() {
             How It <span className="text-gradient">Works</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Four simple steps to revolutionize the way you shop for fashion.
+            Four simple steps to revolutionise the way you shop for fashion.
           </p>
         </motion.div>
 

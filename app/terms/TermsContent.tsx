@@ -56,7 +56,7 @@ export default function TermsContent() {
                 </p>
                 <ul className="list-disc pl-6 mt-4 space-y-2 text-gray-700">
                   <li>A swipe-based interface for discovering fashion products</li>
-                  <li>Personalized style recommendations</li>
+                  <li>Personalised style recommendations</li>
                   <li>Multi-brand shopping cart functionality</li>
                   <li>Automatic discount application</li>
                   <li>Style collections and wishlists</li>
@@ -83,7 +83,7 @@ export default function TermsContent() {
                   <li>Provide accurate, current, and complete information</li>
                   <li>Maintain and update your information</li>
                   <li>Keep your password secure and confidential</li>
-                  <li>Notify us immediately of any unauthorized access</li>
+                  <li>Notify us immediately of any unauthorised access</li>
                 </ul>
 
                 <h3 className="text-2xl font-semibold mb-3 mt-6">4.2 Account Responsibility</h3>
@@ -101,7 +101,7 @@ export default function TermsContent() {
                   <li>Use the Services for any illegal purpose or in violation of any laws</li>
                   <li>Impersonate any person or entity or misrepresent your affiliation</li>
                   <li>Interfere with or disrupt the Services or servers</li>
-                  <li>Attempt to gain unauthorized access to any part of the Services</li>
+                  <li>Attempt to gain unauthorised access to any part of the Services</li>
                   <li>Use automated systems (bots, scrapers) without our permission</li>
                   <li>Transmit viruses, malware, or other harmful code</li>
                   <li>Collect or harvest information about other users</li>
@@ -209,7 +209,7 @@ export default function TermsContent() {
                 <div className="mt-4 p-6 bg-black/5 rounded-xl">
                   <p className="font-semibold mb-2">ShopScope</p>
                   <p className="text-gray-700">Email: <a href="mailto:legal@shopscope.app" className="text-black underline">legal@shopscope.app</a></p>
-                  <p className="text-gray-700">General Inquiries: <a href="mailto:hello@shopscope.app" className="text-black underline">hello@shopscope.app</a></p>
+                  <p className="text-gray-700">General Inquiries: <a href="mailto:info@shopscope.app" className="text-black underline">info@shopscope.app</a></p>
                 </div>
               </section>
 

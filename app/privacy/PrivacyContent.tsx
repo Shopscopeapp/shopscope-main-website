@@ -120,7 +120,7 @@ export default function PrivacyContent() {
               <section>
                 <h2 className="text-3xl font-bold mb-4">6. Data Security</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+                  We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
                 </p>
               </section>
 
@@ -173,7 +173,7 @@ export default function PrivacyContent() {
                 <div className="mt-4 p-6 bg-black/5 rounded-xl">
                   <p className="font-semibold mb-2">ShopScope</p>
                   <p className="text-gray-700">Email: <a href="mailto:privacy@shopscope.app" className="text-black underline">privacy@shopscope.app</a></p>
-                  <p className="text-gray-700">General Inquiries: <a href="mailto:hello@shopscope.app" className="text-black underline">hello@shopscope.app</a></p>
+                  <p className="text-gray-700">General Inquiries: <a href="mailto:info@shopscope.app" className="text-black underline">info@shopscope.app</a></p>
                 </div>
               </section>
             </div>

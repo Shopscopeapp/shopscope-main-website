@@ -1,7 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
+
+// Custom TikTok icon since Lucide doesn't have one
+const TikTokIcon = ({ size = 18 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 const footerLinks = {
   Product: [
@@ -12,7 +19,7 @@ const footerLinks = {
   ],
   Company: [
     { name: "About", href: "#about" },
-    { name: "Contact", href: "mailto:hello@shopscope.app" },
+    { name: "Contact", href: "mailto:info@shopscope.app" },
   ],
   Legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -82,10 +89,10 @@ export default function Footer() {
                 transition={{ duration: 0.3 }}
                 aria-label="TikTok"
               >
-                <Twitter size={18} />
+                <TikTokIcon size={18} />
               </motion.a>
               <motion.a
-                href="mailto:hello@shopscope.app"
+                href="mailto:info@shopscope.app"
                 className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
                 whileHover={{ scale: 1.1, rotate: 360 }}
                 transition={{ duration: 0.3 }}
@@ -178,7 +185,7 @@ export default function Footer() {
             <a href="/terms" className="text-gray-600 hover:text-black transition-colors">
               Terms of Service
             </a>
-            <a href="mailto:hello@shopscope.app" className="text-gray-600 hover:text-black transition-colors">
+            <a href="mailto:info@shopscope.app" className="text-gray-600 hover:text-black transition-colors">
               Contact Us
             </a>
           </div>
