@@ -88,7 +88,7 @@ export default function WaitlistStats() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { phase: "Q1 2025", title: "Beta Testing", desc: "Select waitlist members get early access" },
-              { phase: "Q2 2025", title: "Public Launch", desc: "ShopScope goes live for everyone" },
+              { phase: "Q1 2026", title: "Public Launch", desc: "ShopScope goes live for everyone" },
               { phase: "Q3 2025", title: "Brand Expansion", desc: "1000+ brands added to the platform" },
             ].map((item, index) => (
               <motion.div

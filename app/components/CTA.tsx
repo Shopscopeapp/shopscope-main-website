@@ -99,7 +99,7 @@ export default function CTA() {
                   </div>
                 </div>
                 <div className="bg-black/5 rounded-xl px-4 py-2 text-center">
-                  <span className="text-sm font-bold">Launching Q2 2025</span>
+                  <span className="text-sm font-bold">Launching Q1 2026</span>
                 </div>
               </motion.div>
             </div>
