@@ -4,10 +4,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
 const appScreens = [
-  { image: "/images/app-screens/MAINPAGE.png", title: "Discover", desc: "Browse personalised fashion" },
-  { image: "/images/app-screens/SWIPEFEATURE.png", title: "Swipe", desc: "Like what you love" },
-  { image: "/images/app-screens/CART.png", title: "Shop", desc: "One cart, multiple brands" },
-  { image: "/images/app-screens/PAYOUTS.webp", title: "Earn", desc: "Get paid for sharing" },
+  { image: "/images/app-screens/MAINPAGE.png", title: "Discover", desc: "Shop clothing from brands anywhere" },
+  { image: "/images/app-screens/SWIPEFEATURE.png", title: "Swipe", desc: "As you swipe, ShopScope learns your style" },
+  { image: "/images/app-screens/CART.png", title: "Shop", desc: "Multi-store checkout and access to discounts" },
+  { image: "/images/app-screens/PAYOUTS.webp", title: "Earn", desc: "Post, share and get paid" },
 ];
 
 export default function AppShowcaseScrollHorizontal() {
