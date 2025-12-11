@@ -14,7 +14,7 @@ const footerLinks = {
   Product: [
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
-    { name: "For Brands", href: "#for-brands" },
+    { name: "For Brands", href: "/brands" },
     { name: "Join Waitlist", href: "#" },
   ],
   Company: [
@@ -128,6 +128,7 @@ export default function Footer() {
                             element?.scrollIntoView({ behavior: 'smooth' });
                           }
                         }
+                        // Let normal navigation happen for /brands and other paths
                       }}
                       target={link.href.startsWith('http') ? '_blank' : undefined}
                       rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}

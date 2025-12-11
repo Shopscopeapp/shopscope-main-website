@@ -19,7 +19,7 @@ export default function Navigation() {
   const navItems = [
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
-    { name: "For Brands", href: "#for-brands" },
+    { name: "For Brands", href: "/brands" },
   ];
 
   const scrollToTop = () => {
