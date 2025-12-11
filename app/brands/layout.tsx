@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  other: {
+    "commission-factory-verification": "b6af47671dcb4f27b15385626dc7bedf",
+  },
   title: "For Brands | ShopScope - Turn Style Swipes Into Sales",
   description: "Join ShopScope as a founding brand partner. Pay only when you make a sale – no upfront ad spend, no monthly minimums. Reach Gen Z & young millennials through our swipe-to-shop discovery app.",
   keywords: ["fashion brand partner", "affiliate marketing", "Gen Z marketing", "fashion discovery", "performance marketing", "Shopify brands", "fashion ecommerce", "swipe to shop"],
