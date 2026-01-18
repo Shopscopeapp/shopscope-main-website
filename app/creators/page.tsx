@@ -27,8 +27,6 @@ import {
 } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Cursor from "../components/Cursor";
-import ParticleBackground from "../components/ParticleBackground";
 import ScrollProgress from "../components/ScrollProgress";
 import CreatorForm from "./CreatorForm";
 
@@ -56,26 +54,14 @@ function CreatorsHero() {
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg pt-20">
-      {/* Animated gradient orbs */}
-      <motion.div
-        className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl opacity-30"
-        style={{ background: "radial-gradient(circle, rgba(0,0,0,0.15) 0%, transparent 70%)" }}
-        animate={{ 
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-          y: [0, -30, 0],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      {/* Static gradient orbs - no animation for performance */}
+      <div
+        className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl opacity-20"
+        style={{ background: "radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%)" }}
       />
-      <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl opacity-20"
-        style={{ background: "radial-gradient(circle, rgba(0,0,0,0.2) 0%, transparent 70%)" }}
-        animate={{ 
-          scale: [1.2, 1, 1.2],
-          x: [0, -40, 0],
-          y: [0, 40, 0],
-        }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      <div
+        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl opacity-15"
+        style={{ background: "radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
@@ -431,7 +417,7 @@ function HowYouGetPaid() {
 
                 <motion.div
                   className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-6"
-                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.6 }}
                 >
                   <stream.icon className="text-white" size={32} />
@@ -546,7 +532,7 @@ function ContentWeLove() {
             >
               <motion.div
                 className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6"
-                whileHover={{ rotate: 360 }}
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.6 }}
               >
                 <content.icon className="text-white" size={28} />
@@ -821,7 +807,7 @@ function HowItWorks() {
                   <div className="text-6xl font-black text-black/10 mb-4">{step.number}</div>
                   <motion.div
                     className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6"
-                    whileHover={{ rotate: 360 }}
+                    whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.6 }}
                   >
                     <step.icon className="text-white" size={28} />
@@ -993,8 +979,6 @@ export default function CreatorsPage() {
   return (
     <main className="relative min-h-screen bg-white text-black overflow-hidden">
       <ScrollProgress />
-      <Cursor />
-      <ParticleBackground />
       <Navigation />
 
       <div className="relative z-10">
