@@ -20,6 +20,7 @@ export default function Navigation() {
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
     { name: "For Brands", href: "/brands" },
+    { name: "For Creators", href: "/creators" },
   ];
 
   const scrollToTop = () => {
